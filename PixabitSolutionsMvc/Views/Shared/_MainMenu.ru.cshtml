@@ -1,0 +1,66 @@
+﻿<nav class="navbar navbar-static-top navbar-default navbar-header-full navbar-dark" role="navigation" id="header" style="font-size: 12px; font-family: Arial">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <i class="fa fa-bars"></i>
+            </button>
+        </div> <!-- navbar-header -->
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="@Url.Action("Index", "Home")"><i class="icon-home"></i>Главная</a>
+                    @*<ul class="dropdown-menu dropdown-menu-left">
+                            <li role="presentation" class="dropdown-header">Example</li>
+                            <li><a href="configurator.html">Example<span class="label label-success pull-right">New</span></a></li>
+                        </ul>*@
+                </li>
+                <li class="dropdown">
+                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">О нас</a>
+                    <ul class="dropdown-menu dropdown-menu-left">
+                        <li>
+                            <a href="@Url.Action("About", "Home")">Pixabit Solutions</a>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a href="javascript:void(0);" class="has_children">Карьера</a>
+                            <ul class="dropdown-menu dropdown-menu-left">
+                                <li><a href="@Url.Action("DotNetDeveloper", "Career")">ASP.NET разработчик</a></li>
+                                <li><a href="@Url.Action("BusinessAnalyst", "Career")">Немецкий бизнес аналитик</a></li>
+                                @*<li><a href="#">QA Engineer with German</a></li>*@
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">Услуги</a>
+                    <ul class="dropdown-menu dropdown-menu-left">
+                        <li><a href="@Url.Action("SoftwareDevelopment", "Services")">Разработка програмного обеспечения</a></li>
+                        <li><a href="@Url.Action("DotNetDevelopment", "Services")">.NET разработка</a></li>
+                        <li><a href="@Url.Action("WebDevelopment", "Services")">Web-разработка</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">Проекты</a>
+                    <ul class="dropdown-menu dropdown-menu-left">
+                        <li><a href="@Url.Action("OurCustomers", "Projects")">Клиенты</a></li>
+                        <li class="dropdown-submenu">
+                            <a href="javascript:void(0);" class="has_children">Портфолио</a>
+                            <ul class="dropdown-menu dropdown-menu-left">
+                                <li><a href="@Url.Action("ResponsiveProjects", "Portfolio")">Проекты для устройств</a></li>
+                                <li><a href="@Url.Action("NotResponsiveProjects", "Portfolio")">Проекты</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="@Url.Action("Contact", "Home")">Контакты</a>
+                </li>
+                <li>
+                    <a href="@Url.Action("Impressum", "Home")">Юридическая информация</a>
+                </li>
+            </ul>
+        </div><!-- navbar-collapse -->
+    </div><!-- container -->
+</nav>

@@ -1,0 +1,109 @@
+﻿@using PixabitSolutionsMvc.Resources
+@model PixabitSolutionsMvc.Models.FeedbackForm
+@{
+    ViewBag.Title = "Contact";
+}
+
+<header class="main-header no-margin-bottom">
+    <div class="container">
+        <h1 class="page-title">Контакты</h1>
+        <ol class="breadcrumb pull-right">
+            <li>Контакты</li>
+        </ol>
+    </div>
+</header>
+
+<iframe class="margin-bottom" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2628.2294810749886!2d9.010578099999993!3d48.79659869999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4799d8ecc1355e81%3A0xb327bb8ff49736d!2zUsO2bWVyc3RyYcOfZSA3NSwgNzEyMjkgTGVvbmJlcmcsINCT0LXRgNC80LDQvdC40Y8!5e0!3m2!1sru!2sua!4v1412166216764" width="100%" height="300" frameborder="0" style="border:0"></iframe>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            @if (ViewBag.SendContactSuccess != null)
+            {
+                <div class="alert alert-success">
+                    @ViewBag.SendContactSuccess
+                </div>
+            }
+        </div>
+        <div class="col-md-8">
+            @if (ViewBag.SmtpError != null)
+            {
+                <div class="alert alert-danger">
+                    @ViewBag.SmtpError
+                </div>
+            }
+        </div>
+        </div>
+    </div>
+    <div class="container">
+             <div class="row">
+            <div class="col-md-12">
+                <h2 class="section-title">Отправить сообщение</h2>
+            </div>
+            <div class="col-md-8">
+                <section>
+                    <p>Мы можем стать Вашим лучшим решением!</p>
+                    @using (Html.BeginForm("Contact", "Home", FormMethod.Post, new { id = "contact-form", role = "form" }))
+                    {
+                        <div class="form-group" style="color:red">
+                            <label style="color:dimgray">ФИО</label>
+                            @Html.TextBoxFor(model => model.Name, new { @class = "form-control", id = "name" })
+                            @Html.ValidationMessageFor(model => model.Name)
+                        </div>
+                        <div class="form-group" style="color:red">
+                            <label style="color:dimgray">Email адрес</label>
+                            @Html.TextBoxFor(model => model.Email, new { @class = "form-control", type = "Email", id = "email" })
+                            @Html.ValidationMessageFor(model => model.Email)
+                        </div>
+                        <div class="form-group" style="color:red">
+                            <label style="color:dimgray">Сообщение</label>
+                            @Html.TextAreaFor(model => model.Message, new { @class = "form-control", rows = "8", id = "message" })
+                            @Html.ValidationMessageFor(model => model.Message)
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Captcha)
+                            <img alt="Captcha" src="@Url.Action("CaptchaImage")" style="" />
+                            <div class="form-group" style="color:red">
+                                @Html.EditorFor(model => model.Captcha, new { @class = "form-control", id = "captcha" })
+                                @Html.ValidationMessageFor(model => model.Captcha)
+                            </div>
+                        </div>
+                        <div>
+                            @Html.ValidationSummary(false, Translations.ValidationSummary)
+                            <button id="BntSubmit" type="submit" class="btn btn-ar btn-primary"> Отправить </button>
+                            <button id="BntClear" type="reset" class="btn btn-ar btn-primary">Очистить</button>
+                        </div>
+                    }
+                </section>
+            </div>
+
+            <div class="col-md-4">
+                <section>
+                    <div class="panel panel-primary">
+                        <div class="panel-heading"><i class="fa fa-envelope-o"></i>Наши контакты</div>
+                        <div class="panel-body">
+                            <h4 class="section-title no-margin-top">Германия</h4>
+                            <address>
+                                <strong>pixabit solutions GmbH</strong><br>
+                                Römerstraße 75<br>
+                                DE 71229 Leonberg<br>
+                                <abbr title="Phone">P: </abbr>+49 7152 307959-0<br>
+                                <abbr title="Fax">F: </abbr>+49 7152 307959-8<br>
+                                Mail: <a href="mailto:info@pixabit-solutions.de">info@pixabit-solutions.de</a>
+                            </address>
+
+                            <!-- Business Hours -->
+                            <h4 class="section-title no-margin-top">Украина</h4>
+                            <address>
+                                <strong>pixabit solutions Киев</strong><br>
+                                ул. Дегтяревская 62<br>
+                                04112 Киев<br>
+                                <abbr title="P">P: </abbr>+38 095 629 79 67<br>
+                                Mail: <a href="mailto:info@pixabit-solutions.de">info@pixabit-solutions.de</a>
+                            </address>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>

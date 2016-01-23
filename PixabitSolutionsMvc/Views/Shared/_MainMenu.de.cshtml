@@ -1,0 +1,67 @@
+﻿
+<nav class="navbar navbar-static-top navbar-default navbar-header-full navbar-dark" role="navigation" id="header" style="font-size: 12px; font-family: Arial">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <i class="fa fa-bars"></i>
+            </button>
+        </div> <!-- navbar-header -->
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="@Url.Action("Index", "Home")">Home</a>
+                    @*<ul class="dropdown-menu dropdown-menu-left">
+                            <li role="presentation" class="dropdown-header">Example</li>
+                            <li><a href="configurator.html">Example<span class="label label-success pull-right">New</span></a></li>
+                        </ul>*@
+                </li>
+                <li class="dropdown">
+                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">Über uns</a>
+                    <ul class="dropdown-menu dropdown-menu-left">
+                        <li>
+                            <a href="@Url.Action("About", "Home")">Pixabit Solutions</a>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a href="javascript:void(0);" class="has_children">Karriere</a>
+                            <ul class="dropdown-menu dropdown-menu-left">
+                                <li><a href="@Url.Action("DotNetDeveloper", "Career")">ASP.NET Entwickler</a></li>
+                                <li><a href="@Url.Action("BusinessAnalyst", "Career")">Business Analyst mit deutschen</a></li>
+                                @*<li><a href="#">QA Engineer with German</a></li>*@
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">Service</a>
+                    <ul class="dropdown-menu dropdown-menu-left">
+                        <li><a href="@Url.Action("SoftwareDevelopment", "Services")">Software-Entwicklung</a></li>
+                        <li><a href="@Url.Action("DotNetDevelopment", "Services")">.NET-Entwicklung</a></li>
+                        <li><a href="@Url.Action("WebDevelopment", "Services")">Web-Entwicklung</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">Projekte</a>
+                    <ul class="dropdown-menu dropdown-menu-left">
+                        <li><a href="@Url.Action("OurCustomers", "Projects")">Kunden</a></li>
+                        <li class="dropdown-submenu">
+                            <a href="javascript:void(0);" class="has_children">Portfolio</a>
+                            <ul class="dropdown-menu dropdown-menu-left">
+                                <li><a href="@Url.Action("ResponsiveProjects", "Portfolio")">Gerät Projekte</a></li>
+                                <li><a href="@Url.Action("NotResponsiveProjects", "Portfolio")">Projekte</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="@Url.Action("Contact", "Home")">Kontakt</a>
+                </li>
+                <li>
+                    <a href="@Url.Action("Impressum", "Home")">Impressum</a>
+                </li>
+            </ul>
+        </div><!-- navbar-collapse -->
+    </div><!-- container -->
+</nav>

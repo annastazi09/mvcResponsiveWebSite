@@ -1,0 +1,63 @@
+﻿body{overflow-y: auto;}
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    min-height: 495px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+.header-full{
+    background-image: linear-gradient(to top, #f9f9f9, #f1f1f1);
+}
+
+.header-full-title{
+    background-image: url(../img/pixabit_logo.png);
+}
+
+.header-full-title>div>a{
+    display: block;
+    width: 240px;
+    height: 100px;
+    background: url(../img/ps_blue.png) no-repeat center left;
+}
+
+.service-header-text h1{color: #00ffff;}
+
+.legal-notice span{
+    display: block;
+    line-height: 18px;
+}
+
+.about-img{
+    width: 100%;
+    padding-top: 7%;
+}
+
+article .nav-tabs{margin-top: 30px;}
+
+.nav-tabs li a{font-size: 16px;}
+
+.one-line-list li:before{top: 0px;}
+
+.main-header .breadcrumb li{color: #444444;}
+
+.media .thumbnail,
+.footer-widget .thumbnail{
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.two_cols > li {
+  width: 49.333%;
+  padding-bottom: 2px;
+  padding-top: 1px;
+  display: inline-block;
+  vertical-align: middle;
+}

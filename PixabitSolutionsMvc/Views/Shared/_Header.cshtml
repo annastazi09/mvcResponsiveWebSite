@@ -1,0 +1,44 @@
+﻿<header id="header-full-top" class="hidden-xs header-full">
+    <div class="container">
+        <div class="header-full-title">
+            <div class="animated fadeInRight">
+                <a href="@Url.Action("Index", "Home")" class="active"></a>
+            </div>
+        </div>
+        <nav class="top-nav">
+            <ul class="top-nav-social">
+                <li><a href="https://www.xing.com/companies/pixabitsolutionsgmbh" class="animated fadeIn animation-delay-6 vine"><i class="fa fa-xing"></i></a></li>
+                <li><a href="https://www.facebook.com/pixabit.solutions" class="animated fadeIn animation-delay-8 facebook"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://www.linkedin.com/company/pixabit-gmbh" class="animated fadeIn animation-delay-7 linkedin"><i class="fa fa-linkedin"></i></a></li>
+                
+            </ul>
+        </nav>
+        <nav class="top-nav">
+            <ul class="top-nav-social">
+                    @Html.ActionLink(
+                        linkText: "De",
+                        actionName: "SwitchLanguage",
+                        controllerName: "Home",
+                        routeValues: new { lang = "de-DE", returnUrl = Request.Url },
+                        htmlAttributes: null
+                        )
+
+                    @Html.ActionLink(
+                        linkText: "En",
+                        actionName: "SwitchLanguage",
+                        controllerName: "Home",
+                        routeValues: new { lang = "en-GB", returnUrl = Request.Url },
+                        htmlAttributes: null
+                        )
+
+                    @Html.ActionLink(
+                    linkText: "Ru",
+                    actionName: "SwitchLanguage",
+                    controllerName: "Home",
+                    routeValues: new { lang = "ru-Ru", returnUrl = Request.Url },
+                    htmlAttributes: null
+                    )
+</ul>
+        </nav>
+    </div> <!-- container -->
+</header> <!-- header-full -->

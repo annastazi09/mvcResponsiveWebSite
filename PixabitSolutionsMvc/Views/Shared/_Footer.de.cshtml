@@ -1,0 +1,54 @@
+﻿<aside id="footer-widgets">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h3 class="footer-widget-title">Sitemap</h3>
+                <ul class="list-unstyled two_cols">
+                    <li><a href="@Url.Action("Index", "Home")" class="active">Home</a></li>
+                    <li><a href="@Url.Action("About", "Home")">Über uns</a></li>
+                    <li><a href="@Url.Action("SoftwareDevelopment", "Services")">Software-Entwicklung</a></li>
+                    <li><a href="@Url.Action("DotNetDevelopment", "Services")">.NET Entwicklung</a></li>
+                    <li><a href="@Url.Action("WebDevelopment", "Services")">Web Entwicklung</a></li>
+                    <li><a href="#">Aktuelle Projekte</a></li>
+                    <li><a href="#">Ansprechende Projekte</a></li>
+                    <li><a href="@Url.Action("OurCustomers", "Projects")">Kunden</a></li>
+                    <li><a href="@Url.Action("Contact", "Home")">Kontakt</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 legal-notice">
+                <h3 class="footer-widget-title">Impressum</h3>
+                <p>Inhaber der Website:</p>
+                <span>pixabit solutions GmbH </span>
+                <span>Roemerstrasse 75</span>
+                <span>71229 Leonberg</span>
+                <p>Phone: +49 7152 307959-0</p>
+                <span>Vertretungsberechtigter Geschäftsführer: Stefan Nesselhauf</span>
+                <span>Sitz der Gesellschaft: Leonberg</span>
+                <span>Amtsgericht Stuttgart, HRB 741933</span>
+                <span>Steuernummer: 70095/82785</span>
+            </div>
+            <div class="col-md-4">
+                <div class="footer-widget">
+                    <h3 class="footer-widget-title">Aktuelle Projekte</h3>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-3 col-xs-6">
+                            <a href="#" class="thumbnail"><img src="@Url.Content("~/Content/img/customers/bosch-small.png")" class="img-responsive" alt="Bosch"></a>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-3 col-xs-6">
+                            <a href="#" class="thumbnail"><img src="~/Content/img/customers/wts-small.png" class="img-responsive" alt="Wts"></a>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-3 col-xs-6">
+                            <a href="#" class="thumbnail"><img src="~/Content/img/customers/porsche-small.png" class="img-responsive" alt="Porsche"></a>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-3 col-xs-6">
+                            <a href="#" class="thumbnail"><img src="~/Content/img/customers/vpv-small.png" class="img-responsive" alt="VPV"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- row -->
+    </div> <!-- container -->
+</aside> <!-- footer-widgets -->
+<footer id="footer">
+    <p>&copy; 2014 <a href="@Url.Action("Impressum", "Home")">pixabit solutions GmbH • Impressum</a></p>
+</footer>
